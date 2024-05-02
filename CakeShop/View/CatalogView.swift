@@ -54,7 +54,10 @@ struct CatalogView: View {
                     LazyVGrid(columns: layout, spacing: 16, content: {
                         ForEach(CatalogViewModel.shared.products, id: \.id) { item in
                             NavigationLink {
-                                ProductDetailView(product: item)
+                                
+                                let viewModel = ProductDetailViewModel(product: item)
+                                
+                                ProductDetailView(viewModel: viewModel)
                             } label: {
                                 ProductCell(product: item)
                                     .foregroundStyle(.black)

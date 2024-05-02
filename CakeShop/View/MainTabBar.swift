@@ -9,6 +9,8 @@ import SwiftUI
 
 struct MainTabBar: View {
     
+    var viewModel: MainTabBarViewModel
+    
     @State private var isLogin = false
     
     var body: some View {
@@ -26,7 +28,7 @@ struct MainTabBar: View {
                 }
             }
             
-            CartView()
+            CartView(viewModel: CartViewModel.shared)
                 .tabItem {
                     VStack {
                         Text("Корзина")
@@ -45,6 +47,6 @@ struct MainTabBar: View {
     }
 }
 
-#Preview {
-    MainTabBar()
-}
+//#Preview {
+//    MainTabBar(viewModel: MainTabBarViewModel(user: User))
+//}

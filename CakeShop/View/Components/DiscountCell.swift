@@ -16,7 +16,6 @@ struct DiscountCell: View {
             Image("discount")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-//                .frame(maxWidth: screen.width * 0.8)
                 .clipped()
         }.cornerRadius(12)
             .frame(width: screen.width * 0.8, height: screen.width * 0.4)
