@@ -11,7 +11,7 @@ class CatalogViewModel: ObservableObject {
     
     static let shared = CatalogViewModel()
     
-    var products = [
+    @Published var products = [
         Product(id: "2",
                 title: "Molochnaya",
                 imageURL: "",
@@ -33,7 +33,7 @@ class CatalogViewModel: ObservableObject {
                 price: 8000,
                 description: "")]
     
-    var filter = [
+       var filter = [
         Filter(title: "Детские торты",
                id: "1"),
         Filter(title: "Для родителей",
@@ -51,4 +51,15 @@ class CatalogViewModel: ObservableObject {
         Discount(id: "2", 
                  image: "discount")
     ]
+    
+    func getProducts() {
+        DatabaseService.shared.getProducts { result in
+            switch result {
+            case .success(let products):
+                self.products = products
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
 }

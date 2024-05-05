@@ -36,7 +36,7 @@ struct MainTabBar: View {
                     }
                 }
             
-            ProfileView()
+            ProfileView( viewModel: ProfileViewModel(profile: MBUser(id: "", name: "", phone: 0, address: "")))
                 .tabItem {
                     VStack {
                         Text("Профиль")

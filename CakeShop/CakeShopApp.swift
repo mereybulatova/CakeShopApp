@@ -17,7 +17,16 @@ struct CakeShopApp: App {
     
     var body: some Scene {
         WindowGroup {
-            AuthView()
+            if let user = AuthService.shared.currentUser {
+                if user.uid == "tLgcAvFIn3ZM0iWe7HRblWOojUI2" {
+                    AdminOrdersView()
+                } else {
+                    let viewModel = MainTabBarViewModel(user: user)
+                    MainTabBar(viewModel: viewModel)
+                }
+            } else {
+                AuthView()
+            }
         }
     }
     

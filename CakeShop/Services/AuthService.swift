@@ -20,6 +20,10 @@ class AuthService {
         return auth.currentUser
     }
     
+    func signOut() {
+       try! auth.signOut()
+    }
+    
     func registration(email: String,
                       password: String,
                       completion: @escaping (Result<User, Error>) -> ()) {
@@ -31,7 +35,7 @@ class AuthService {
                                     name: "",
                                     phone: 0,
                                     address: "")
-                DatabaseServices.shared.setupUser(user: mBUser) { resultDB in
+                DatabaseService.shared.setupProfile(user: mBUser) { resultDB in
                     switch resultDB {
                     case .success(_):
                         completion(.success(result.user))

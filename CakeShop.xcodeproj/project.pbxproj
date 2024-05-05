@@ -18,7 +18,18 @@
 		C41094BC2BE42CF900E92219 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41094BB2BE42CF900E92219 /* AuthService.swift */; };
 		C41094BF2BE4339B00E92219 /* MainTabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41094BE2BE4339B00E92219 /* MainTabBarViewModel.swift */; };
 		C41094C12BE4359200E92219 /* MBUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41094C02BE4359200E92219 /* MBUser.swift */; };
-		C41094C32BE4368A00E92219 /* DatabaseServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41094C22BE4368A00E92219 /* DatabaseServices.swift */; };
+		C41094C32BE4368A00E92219 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41094C22BE4368A00E92219 /* DatabaseService.swift */; };
+		C41094C52BE56B5300E92219 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41094C42BE56B5300E92219 /* ProfileViewModel.swift */; };
+		C41094C72BE6024400E92219 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41094C62BE6024400E92219 /* Order.swift */; };
+		C41094C92BE609D300E92219 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41094C82BE609D300E92219 /* Status.swift */; };
+		C4874F9F2BE6D34500DA80F1 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4874F9E2BE6D34400DA80F1 /* OrderCell.swift */; };
+		C4874FA12BE80DAE00DA80F1 /* AdminOrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4874FA02BE80DAE00DA80F1 /* AdminOrdersView.swift */; };
+		C4874FA42BE80EB700DA80F1 /* AdminOrdersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4874FA32BE80EB700DA80F1 /* AdminOrdersViewModel.swift */; };
+		C4874FA62BE8107600DA80F1 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4874FA52BE8107600DA80F1 /* OrderView.swift */; };
+		C4874FA82BE8108D00DA80F1 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4874FA72BE8108D00DA80F1 /* OrderViewModel.swift */; };
+		C4874FAB2BE8227100DA80F1 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4874FAA2BE8227100DA80F1 /* ImagePicker.swift */; };
+		C4874FAD2BE8246C00DA80F1 /* AddProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4874FAC2BE8246C00DA80F1 /* AddProductView.swift */; };
+		C4874FAF2BE82CDA00DA80F1 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4874FAE2BE82CDA00DA80F1 /* StorageService.swift */; };
 		C4D5A2B22BE1429D0078DC55 /* CakeShopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D5A2B12BE1429D0078DC55 /* CakeShopApp.swift */; };
 		C4D5A2B42BE1429D0078DC55 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D5A2B32BE1429D0078DC55 /* AuthView.swift */; };
 		C4D5A2B62BE1429F0078DC55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4D5A2B52BE1429F0078DC55 /* Assets.xcassets */; };
@@ -47,7 +58,19 @@
 		C41094BB2BE42CF900E92219 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		C41094BE2BE4339B00E92219 /* MainTabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewModel.swift; sourceTree = "<group>"; };
 		C41094C02BE4359200E92219 /* MBUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBUser.swift; sourceTree = "<group>"; };
-		C41094C22BE4368A00E92219 /* DatabaseServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseServices.swift; sourceTree = "<group>"; };
+		C41094C22BE4368A00E92219 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		C41094C42BE56B5300E92219 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		C41094C62BE6024400E92219 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		C41094C82BE609D300E92219 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		C4874F9E2BE6D34400DA80F1 /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
+		C4874FA02BE80DAE00DA80F1 /* AdminOrdersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminOrdersView.swift; sourceTree = "<group>"; };
+		C4874FA32BE80EB700DA80F1 /* AdminOrdersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminOrdersViewModel.swift; sourceTree = "<group>"; };
+		C4874FA52BE8107600DA80F1 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
+		C4874FA72BE8108D00DA80F1 /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
+		C4874FA92BE821C400DA80F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C4874FAA2BE8227100DA80F1 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		C4874FAC2BE8246C00DA80F1 /* AddProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductView.swift; sourceTree = "<group>"; };
+		C4874FAE2BE82CDA00DA80F1 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		C4D5A2AE2BE1429D0078DC55 /* CakeShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CakeShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4D5A2B12BE1429D0078DC55 /* CakeShopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakeShopApp.swift; sourceTree = "<group>"; };
 		C4D5A2B32BE1429D0078DC55 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
@@ -86,9 +109,20 @@
 			isa = PBXGroup;
 			children = (
 				C41094BB2BE42CF900E92219 /* AuthService.swift */,
-				C41094C22BE4368A00E92219 /* DatabaseServices.swift */,
+				C41094C22BE4368A00E92219 /* DatabaseService.swift */,
+				C4874FAE2BE82CDA00DA80F1 /* StorageService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		C4874FA22BE80DBB00DA80F1 /* AdminInterface */ = {
+			isa = PBXGroup;
+			children = (
+				C4874FA02BE80DAE00DA80F1 /* AdminOrdersView.swift */,
+				C4874FA52BE8107600DA80F1 /* OrderView.swift */,
+				C4874FAC2BE8246C00DA80F1 /* AddProductView.swift */,
+			);
+			path = AdminInterface;
 			sourceTree = "<group>";
 		};
 		C4D5A2A52BE1429C0078DC55 = {
@@ -110,6 +144,7 @@
 		C4D5A2B02BE1429D0078DC55 /* CakeShop */ = {
 			isa = PBXGroup;
 			children = (
+				C4874FA92BE821C400DA80F1 /* Info.plist */,
 				C4D5A2B12BE1429D0078DC55 /* CakeShopApp.swift */,
 				C4D5A2D32BE184900078DC55 /* Model */,
 				C4D5A2CD2BE17EBE0078DC55 /* View */,
@@ -140,6 +175,7 @@
 				C4D5A2CB2BE17AF80078DC55 /* ProfileView.swift */,
 				C4D5A2D72BE187A90078DC55 /* ProductDetailView.swift */,
 				C4D5A2E12BE1A54C0078DC55 /* DiscountDetailView.swift */,
+				C4874FA22BE80DBB00DA80F1 /* AdminInterface */,
 				C4D5A2D22BE17FBA0078DC55 /* Components */,
 			);
 			path = View;
@@ -152,6 +188,8 @@
 				C4D5A2D92BE18AF50078DC55 /* ProductFilterCell.swift */,
 				C4D5A2DF2BE1961A0078DC55 /* DiscountCell.swift */,
 				C41094AF2BE4077B00E92219 /* PositionCell.swift */,
+				C4874F9E2BE6D34400DA80F1 /* OrderCell.swift */,
+				C4874FAA2BE8227100DA80F1 /* ImagePicker.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -164,6 +202,8 @@
 				C4D5A2DD2BE195EA0078DC55 /* Discount.swift */,
 				C41094AD2BE2F2FE00E92219 /* Position.swift */,
 				C41094C02BE4359200E92219 /* MBUser.swift */,
+				C41094C62BE6024400E92219 /* Order.swift */,
+				C41094C82BE609D300E92219 /* Status.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -175,6 +215,9 @@
 				C41094A92BE2C67B00E92219 /* ProductDetailViewModel.swift */,
 				C41094AB2BE2F2C400E92219 /* CartViewModel.swift */,
 				C41094BE2BE4339B00E92219 /* MainTabBarViewModel.swift */,
+				C41094C42BE56B5300E92219 /* ProfileViewModel.swift */,
+				C4874FA32BE80EB700DA80F1 /* AdminOrdersViewModel.swift */,
+				C4874FA72BE8108D00DA80F1 /* OrderViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -264,23 +307,34 @@
 				C41094B02BE4077B00E92219 /* PositionCell.swift in Sources */,
 				C4D5A2E22BE1A54D0078DC55 /* DiscountDetailView.swift in Sources */,
 				C4D5A2C62BE1743F0078DC55 /* MainTabBar.swift in Sources */,
+				C41094C52BE56B5300E92219 /* ProfileViewModel.swift in Sources */,
 				C4D5A2B42BE1429D0078DC55 /* AuthView.swift in Sources */,
+				C4874FA42BE80EB700DA80F1 /* AdminOrdersViewModel.swift in Sources */,
+				C4874FA62BE8107600DA80F1 /* OrderView.swift in Sources */,
 				C41094BC2BE42CF900E92219 /* AuthService.swift in Sources */,
+				C41094C92BE609D300E92219 /* Status.swift in Sources */,
 				C41094AC2BE2F2C400E92219 /* CartViewModel.swift in Sources */,
+				C4874FAB2BE8227100DA80F1 /* ImagePicker.swift in Sources */,
 				C4D5A2C82BE17AC80078DC55 /* CatalogView.swift in Sources */,
 				C41094C12BE4359200E92219 /* MBUser.swift in Sources */,
+				C4874F9F2BE6D34500DA80F1 /* OrderCell.swift in Sources */,
+				C41094C72BE6024400E92219 /* Order.swift in Sources */,
 				C41094AE2BE2F2FE00E92219 /* Position.swift in Sources */,
 				C41094AA2BE2C67B00E92219 /* ProductDetailViewModel.swift in Sources */,
 				C41094BF2BE4339B00E92219 /* MainTabBarViewModel.swift in Sources */,
 				C4D5A2DE2BE195EA0078DC55 /* Discount.swift in Sources */,
+				C4874FA12BE80DAE00DA80F1 /* AdminOrdersView.swift in Sources */,
 				C4D5A2DA2BE18AF50078DC55 /* ProductFilterCell.swift in Sources */,
 				C4D5A2CC2BE17AF80078DC55 /* ProfileView.swift in Sources */,
 				C4D5A2D12BE17FAE0078DC55 /* ProductCell.swift in Sources */,
 				C4D5A2E02BE1961A0078DC55 /* DiscountCell.swift in Sources */,
+				C4874FAD2BE8246C00DA80F1 /* AddProductView.swift in Sources */,
 				C4D5A2B22BE1429D0078DC55 /* CakeShopApp.swift in Sources */,
+				C4874FAF2BE82CDA00DA80F1 /* StorageService.swift in Sources */,
 				C4D5A2CF2BE17EE20078DC55 /* Product.swift in Sources */,
+				C4874FA82BE8108D00DA80F1 /* OrderViewModel.swift in Sources */,
 				C4D5A2D52BE184AC0078DC55 /* CatalogViewModel.swift in Sources */,
-				C41094C32BE4368A00E92219 /* DatabaseServices.swift in Sources */,
+				C41094C32BE4368A00E92219 /* DatabaseService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +471,9 @@
 				DEVELOPMENT_TEAM = 477SFTV837;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CakeShop/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Разрешите использовать камеру";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Разрешите открыть галерею";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -446,6 +503,9 @@
 				DEVELOPMENT_TEAM = 477SFTV837;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CakeShop/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Разрешите использовать камеру";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Разрешите открыть галерею";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -11,6 +11,8 @@ struct CatalogView: View {
     
     let layout = [GridItem(.adaptive(minimum: screen.width / 2.4))]
     @State private var searchText = ""
+    @StateObject var viewModel = CatalogViewModel()
+    
     var body: some View {
         
         ScrollView(.vertical, showsIndicators: false) {
@@ -20,7 +22,7 @@ struct CatalogView: View {
             
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHGrid(rows: layout, spacing: 12, content: {
-                    ForEach(CatalogViewModel.shared.discount, id: \.id) { item in
+                    ForEach(viewModel.discount, id: \.id) { item in
                         NavigationLink {
                                 DiscountDetailView(discount: item)
                         } label: {
@@ -33,7 +35,7 @@ struct CatalogView: View {
             
                 ScrollView(.horizontal, showsIndicators: false) {
                     LazyHGrid(rows: layout, spacing: 16, content: {
-                        ForEach(CatalogViewModel.shared.filter, id: \.id) { item in
+                        ForEach(viewModel.filter, id: \.id) { item in
                             NavigationLink {
 //                                ProductDetailView(product: item)
                             } label: {
@@ -52,7 +54,7 @@ struct CatalogView: View {
             
                 ScrollView(.vertical, showsIndicators: false) {
                     LazyVGrid(columns: layout, spacing: 16, content: {
-                        ForEach(CatalogViewModel.shared.products, id: \.id) { item in
+                        ForEach(viewModel.products, id: \.id) { item in
                             NavigationLink {
                                 
                                 let viewModel = ProductDetailViewModel(product: item)
@@ -68,6 +70,9 @@ struct CatalogView: View {
             }.frame(maxWidth: .infinity, alignment: .leading)
                 .font(.largeTitle.bold())
         }.background(.white)
+            .onAppear {
+                viewModel.getProducts()
+            }
     }
 }
 

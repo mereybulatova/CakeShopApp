@@ -12,9 +12,8 @@ struct ProfileView: View {
     @State var isAvaAlertPresented = false
     @State var isQuitAlertPresented = false
     @State var isAuthViewPresented = false
-    @State var name: String = "Имя Фамилия"
-    @State var phone: Int = 7071200528
-    @State var address: String = "Ваш адрес будет тут"
+    
+    @StateObject var viewModel: ProfileViewModel
     
     var body: some View {
         VStack(alignment: .center, spacing: 20) {
@@ -42,12 +41,12 @@ struct ProfileView: View {
                     }
                 
                 VStack(alignment: .leading, spacing: 12) {
-                    TextField("Имя", text: $name)
+                    TextField("Имя", text: $viewModel.profile.name)
                         .font(.body.bold())
                     
                     HStack {
                         Text("+7")
-                        TextField("Phone", value: $phone, format: .number)
+                        TextField("Введите номер телефона", value: $viewModel.profile.phone, format: .number)
                     }
                 }
             }.padding(.horizontal)
@@ -55,11 +54,17 @@ struct ProfileView: View {
             VStack(alignment: .leading, spacing: 8) {
                 Text("Адрес доставки:")
                     .bold()
-                TextField("Address", text: $address)
+                TextField("Address", text: $viewModel.profile.address)
             }.padding(.horizontal)
            
             List {
-               Text("Ваши заказы будут тут")
+                if viewModel.orders.count == 0 {
+                    Text("Ваши заказы будут тут")
+                } else {
+                    ForEach(viewModel.orders, id: \.id) { order in
+                        OrderCell(order: order)
+                    }
+                }
             }.listStyle(.plain)
             
             Button {
@@ -88,9 +93,17 @@ struct ProfileView: View {
                     AuthView()
                 })
         }
+        .onSubmit {
+            viewModel.setProfile()
+        }
+        
+        .onAppear {
+            self.viewModel.getProfile()
+            self.viewModel.getOrders()
+        }
     }
 }
 
 #Preview {
-    ProfileView()
+    ProfileView(viewModel: ProfileViewModel(profile: MBUser(id: "", name: "Merey Bulatova", phone: 87071200528, address: "Хрен доедешь")))
 }
