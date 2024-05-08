@@ -6,4 +6,4 @@
 - Firebase
 - SPM
 
-## Status: in development
+*Status: in development*
