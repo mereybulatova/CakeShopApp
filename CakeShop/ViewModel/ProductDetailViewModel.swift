@@ -29,7 +29,7 @@ class ProductDetailViewModel: ObservableObject {
     }
     
     func getImage() {
-        StorageService.shared.downloadProductImage(id: product.id) { result in
+        StorageService.shared.downloadProductImage(id: product.id, category: product.category.rawValue) { result in
             switch result {
             case .success(let data):
                 if let image = UIImage(data: data) {

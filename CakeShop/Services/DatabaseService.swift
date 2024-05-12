@@ -109,7 +109,7 @@ class DatabaseService {
     }
     
     func setProduct(product: Product, image: Data, completion: @escaping (Result<Product, Error>) -> ()) {
-        StorageService.shared.upload(id: product.id, image: image) { result in
+        StorageService.shared.upload(id: product.id, category: product.category.rawValue, image: image) { result in
             switch result {
             case .success(let sizeInfo):
                 print(sizeInfo)
@@ -154,8 +154,11 @@ class DatabaseService {
             let docs = qSnap.documents
             var products = [Product]()
             for doc in docs {
-                guard let product = Product(doc: doc) else { return }
-                products.append(product)
+                if let product = Product(doc: doc) {
+                    products.append(product)
+                } else {
+                    print("Error: Unable to initialize Product from document: \(doc.documentID)")
+                }
             }
             completion(.success(products))
         }

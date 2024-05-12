@@ -43,6 +43,7 @@ class ProfileViewModel: ObservableObject {
             switch result {
             case .success(let user):
                 print(user.name)
+                self.profile = user
             case .failure(let error):
                 print("Ошибка отправки данных \(error.localizedDescription)")
             }

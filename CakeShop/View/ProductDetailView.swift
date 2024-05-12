@@ -74,5 +74,5 @@ struct ProductDetailView: View {
                                                                          title: "Molochnaya",
                                                                          imageURL: "",
                                                                          price: 6590,
-                                                                         description: "Dhbfjefnewkjefnekfnerkfnefjknerkjdnvdfjknvdivneirknvjdfkjvnfdkjv")))
+                                                                         description: "Dhbfjefnewkjefnekfnerkfnefjknerkjdnvdfjknvdivneirknvjdfkjvnfdkjv", category: productCategory.forParents)))
 }

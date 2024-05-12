@@ -14,6 +14,7 @@ struct Product {
     var imageURL: String = ""
     var price: Int
     var description: String
+    var category: productCategory
 //    var ordersCount: Int
 //    var isRecommend: Bool
     
@@ -23,6 +24,7 @@ struct Product {
         repres["title"] = self.title
         repres["price"] = self.price
         repres["description"] = self.description
+        repres["category"] = self.category.rawValue
         return repres
     }
     
@@ -30,12 +32,14 @@ struct Product {
                   title: String,
                   imageURL: String = "",
                   price: Int,
-                  description: String) {
+                  description: String,
+                  category: productCategory) {
         self.id = id
         self.title = title
         self.imageURL = imageURL
         self.price = price
         self.description = description
+        self.category = category
     }
     
     init?(doc: QueryDocumentSnapshot) {
@@ -44,10 +48,14 @@ struct Product {
         guard let title = data["title"] as? String else { return nil }
         guard let price = data["price"] as? Int else { return nil }
         guard let description = data["description"] as? String else { return nil }
+        guard let categoryString = data["category"] as? String else { return nil }
+        
+        guard let category = productCategory(rawValue: categoryString) else { return nil }
         
         self.id = id
         self.title = title
         self.price = price
         self.description = description
+        self.category = category
     }
 }

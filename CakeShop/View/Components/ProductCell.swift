@@ -33,7 +33,7 @@ struct ProductCell: View {
             .background(Color("elementsBackground"))
             .cornerRadius(12)
             .onAppear {
-                StorageService.shared.downloadProductImage(id: self.product.id) { result in
+                StorageService.shared.downloadProductImage(id: self.product.id, category: self.product.category.rawValue) { result in
                     switch result {
                     case .success(let data):
                         if let img = UIImage(data: data) {
@@ -48,5 +48,5 @@ struct ProductCell: View {
 }
 
 #Preview {
-    ProductCell(product: Product(id: "1", title: "Вупи пай", imageURL: "", price: 7500, description: "Ijrk"))
+    ProductCell(product: Product(id: "1", title: "Вупи пай", imageURL: "", price: 7500, description: "Ijrk", category: productCategory.forParents))
 }

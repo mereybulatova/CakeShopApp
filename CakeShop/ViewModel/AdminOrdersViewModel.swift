@@ -32,6 +32,4 @@ class AdminOrdersViewModel: ObservableObject {
             }
         }
     }
-    
-    
 }

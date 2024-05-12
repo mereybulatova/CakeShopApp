@@ -85,6 +85,7 @@ struct ProfileView: View {
                 .confirmationDialog("Точно ли выйти?", isPresented: $isQuitAlertPresented) {
                     Button(action: {
                         isAuthViewPresented.toggle()
+                        AuthService.shared.signOut()
                     }, label: {
                         Text("Да")
                     })
@@ -94,7 +95,7 @@ struct ProfileView: View {
                 })
         }
         .onSubmit {
-            viewModel.setProfile()
+            self.viewModel.setProfile()
         }
         
         .onAppear {

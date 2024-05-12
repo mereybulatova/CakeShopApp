@@ -15,7 +15,6 @@ struct MBUser: Identifiable {
     var address: String
     
     var representation: [String: Any] {
-        
         var repres = [String: Any]()
         repres["id"] = self.id
         repres["name"] = self.name

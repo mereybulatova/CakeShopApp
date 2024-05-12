@@ -14,6 +14,13 @@ struct AddProductView: View {
     @State private var title: String = ""
     @State private var description: String = ""
     @State private var price: Int? = nil
+    @State private var selectedCategoryIndex = 0
+    
+    var categories: [String] {
+        productCategory.allCases.map { $0.rawValue }
+    }
+       
+    
     @Environment (\.dismiss) var dismiss
     
     var body: some View {
@@ -28,6 +35,20 @@ struct AddProductView: View {
                     showImagePicker.toggle()
                 }
                 .cornerRadius(24)
+            
+            Picker(selection: $selectedCategoryIndex) {
+                ForEach(0..<categories.count, id: \.self) { index in
+                    Text(categories[index])
+                }
+            } label: {
+                Text("Категория продукта")
+            }
+            .alignmentGuide(.leading) { _ in 0 }
+            .padding(.horizontal, 95)
+            .frame(alignment: .leading)
+            .frame(maxWidth: .infinity)
+            .pickerStyle(.menu)
+            
             TextField("Название продукта", text: $title)
                 .padding()
             TextField("Цена продукта", value: $price, format: .number)
@@ -41,7 +62,8 @@ struct AddProductView: View {
                     print("Невозможно извлечь цену из TextField")
                     return
                 }
-                let product = Product(id: UUID().uuidString, title: title, imageURL: "", price: price, description: description)
+                let selectedCategory = productCategory.allCases[selectedCategoryIndex]
+                let product = Product(id: UUID().uuidString, title: title, imageURL: "", price: price, description: description, category: selectedCategory)
                 guard let imageData = image.jpegData(compressionQuality: 0.15) else { return }
                 DatabaseService.shared.setProduct(product: product, image: imageData) { result in
                     switch result {

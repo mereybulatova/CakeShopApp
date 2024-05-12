@@ -28,5 +28,5 @@ struct PositionCell: View {
                                                                             title: "Moloch",
                                                                             imageURL: "placeholder",
                                                                             price: 5999,
-                                                                            description: "Vkusnooooo"), count: 1))
+                                                                            description: "Vkusnooooo", category: productCategory.berryChoco), count: 1))
 }

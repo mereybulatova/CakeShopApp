@@ -18,10 +18,11 @@ struct DiscountCell: View {
                 .aspectRatio(contentMode: .fit)
                 .clipped()
         }.cornerRadius(12)
-            .frame(width: screen.width * 0.8, height: screen.width * 0.4)
+            .frame(width: screen.width * 0.9, height: screen.width * 0.5)
+            .aspectRatio(contentMode: .fill)
     }
 }
 
 #Preview {
-    DiscountCell(discount: Discount(id: "1", image: "discount"))
+    DiscountCell(discount: Discount(id: "1", image: "discount", title: "", description: "Тут тто"))
 }
